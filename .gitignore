@@ -1,4 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
+bin
+assets/OfficialOMRSampleDoc/
+assets/omrtest/
+assets/omrtest2/
+
+
 ### Java template
 # Compiled class file
 *.class
