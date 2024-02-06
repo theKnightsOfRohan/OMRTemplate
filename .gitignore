@@ -1,8 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 bin
-assets/OfficialOMRSampleDoc/
-assets/omrtest/
-assets/omrtest2/
+assets/output/
 
 
 ### Java template
