@@ -11,9 +11,9 @@ public class FilterTest {
     public static String currentFolder = System.getProperty("user.dir") + "/";
 
     public static void main(String[] args) {
-        SaveAndDisplayExample("omrtest");
-        SaveAndDisplayExample("omrtest2");
-        SaveAndDisplayExample("OfficialOMRSampleDoc");
+        // SaveAndDisplayExample("omrtest");
+        // SaveAndDisplayExample("omrtest2");
+        // SaveAndDisplayExample("OfficialOMRSampleDoc");
 
         // RunTheFilter();
     }
