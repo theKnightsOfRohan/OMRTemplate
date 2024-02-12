@@ -40,6 +40,8 @@ public class OpticalMarkReaderMain {
 
         ReadWrite.writeToFile(currentFolder + "assets/output/correctAnswers.txt", markedAnswers);
 
+        System.out.println("Conducting analysis...");
+
         ConstructOutputStatisticFiles.perStudentAnalysis(markedAnswers,
                 currentFolder + "assets/output/student_analysis.json");
         ConstructOutputStatisticFiles.perQuestionAnalysis(markedAnswers,
@@ -144,12 +146,12 @@ class BWFilter implements NamedPixelFilter {
     public DImage processImage(DImage img) {
         short[][] pixels = img.getBWPixelGrid();
 
-        for (int i = 0; i < pixels.length; i++) {
-            for (int j = 0; j < pixels[i].length; j++) {
-                if (pixels[i][j] < 200) {
-                    pixels[i][j] = 0;
+        for (int r = 0; r < pixels.length; r++) {
+            for (int c = 0; c < pixels[r].length; c++) {
+                if (pixels[r][c] < 200) {
+                    pixels[r][c] = 0;
                 } else {
-                    pixels[i][j] = 255;
+                    pixels[r][c] = 255;
                 }
             }
         }
