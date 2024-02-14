@@ -16,7 +16,7 @@ public class BubbleData {
     public static void readConfigValues() {
         Config config;
 
-        try (var evaluator = ConfigEvaluator.preconfigured()) {
+        try (ConfigEvaluator evaluator = ConfigEvaluator.preconfigured()) {
             config = evaluator.evaluate(ModuleSource.path("src/BubbleData.pkl"));
         }
 
