@@ -33,12 +33,10 @@ public class OpticalMarkReaderMain {
         ArrayList<ArrayList<Integer>> markedAnswers = new ArrayList<ArrayList<Integer>>();
 
         for (int i = 0; i < pages.size(); i++) {
-            ArrayList<Integer> studentAnswer = getMarkedAnswers(pages.get(i));
-            System.out.println("Page " + (i + 1) + " marked answers: " + studentAnswer);
-            markedAnswers.add(studentAnswer);
+            ArrayList<Integer> studentAnswers = getMarkedAnswers(pages.get(i));
+            System.out.println("Page " + (i + 1) + " marked answers: " + studentAnswers);
+            markedAnswers.add(studentAnswers);
         }
-
-        ReadWrite.writeToFile(currentFolder + "assets/output/correctAnswers.txt", markedAnswers);
 
         System.out.println("Conducting analysis...");
 
@@ -163,22 +161,5 @@ class BWFilter implements NamedPixelFilter {
     @Override
     public String getName() {
         return "BWFilter";
-    }
-}
-
-class BubbleData {
-    public static final int bubbleSize = 20;
-    public static final int startC = 105;
-    public static final int startR = 108;
-    public static final int numQuestions = 12;
-    public static final int numPossibleAnswers = 5;
-
-    public static final double deltaC = 24.5;
-    public static final double deltaR = 48.36;
-
-    public static String getString() {
-        return "Bubble size: " + bubbleSize + ", Start C: " + startC + ", Start R: " + startR + ", Delta C: " + deltaC
-                + ", Delta R: " + deltaR + ", Num questions: " + numQuestions + ", Num possible answers: "
-                + numPossibleAnswers;
     }
 }

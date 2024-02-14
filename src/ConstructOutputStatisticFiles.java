@@ -8,6 +8,7 @@ import Interfaces.PixelFilter;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.pkl.codegen.java.JavaCodeGenerator;
 
 public class ConstructOutputStatisticFiles {
     public static void main(String[] args) {
