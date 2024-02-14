@@ -4,14 +4,30 @@ import org.pkl.config.java.JavaType;
 import org.pkl.core.ModuleSource;
 
 public class BubbleData {
-    public static final int bubbleSize = 20;
-    public static final int startC = 105;
-    public static final int startR = 108;
-    public static final int numQuestions = 12;
-    public static final int numPossibleAnswers = 5;
+    public static int bubbleSize;
+    public static int startC;
+    public static int startR;
+    public static int numQuestions;
+    public static int numPossibleAnswers;
 
-    public static final double deltaC = 24.5;
-    public static final double deltaR = 48.36;
+    public static double deltaC;
+    public static double deltaR;
+
+    public static void readConfigValues() {
+        Config config;
+
+        try (var evaluator = ConfigEvaluator.preconfigured()) {
+            config = evaluator.evaluate(ModuleSource.path("src/BubbleData.pkl"));
+        }
+
+        bubbleSize = config.get("bubbleSize").as(int.class);
+        startC = config.get("startC").as(int.class);
+        startR = config.get("startR").as(int.class);
+        numQuestions = config.get("numQuestions").as(int.class);
+        numPossibleAnswers = config.get("numPossibleAnswers").as(int.class);
+        deltaC = config.get("deltaC").as(double.class);
+        deltaR = config.get("deltaR").as(double.class);
+    }
 
     public static String getString() {
         return "Bubble size: " + bubbleSize + ", Start C: " + startC + ", Start R: " + startR + ", Delta C: " + deltaC

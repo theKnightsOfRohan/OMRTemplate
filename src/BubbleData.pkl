@@ -1,0 +1,8 @@
+bubbleSize = 20;
+startC = 105;
+startR = 108;
+numQuestions = 12;
+numPossibleAnswers = 5;
+
+deltaC = 24.5;
+deltaR = 48.36;

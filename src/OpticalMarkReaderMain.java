@@ -17,13 +17,7 @@ public class OpticalMarkReaderMain {
 
         System.out.println("Loading pdf at " + pathToPdf);
 
-        /*
-         * Your code here to...
-         * (1). Load the pdf
-         * (2). Loop over its pages
-         * (3). Create a DImage from each page and process its pixels
-         * (4). Output 2 csv files
-         */
+        BubbleData.readConfigValues();
 
         ArrayList<DImage> pages = getPagesFromPDF(pathToPdf);
         System.out.println(BubbleData.getString());

@@ -16,6 +16,8 @@ public class ConstructOutputStatisticFiles {
         String studentAnalysisPath = "assets/output/student_analysis.json";
         String questionAnalysisPath = "assets/output/question_analysis.json";
 
+        BubbleData.readConfigValues();
+
         for (int i = 0; i < 10; i++) {
             ArrayList<Integer> temp = new ArrayList<Integer>();
             for (int j = 0; j < 10; j++) {
