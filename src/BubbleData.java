@@ -13,6 +13,8 @@ public class BubbleData {
     public static double deltaC;
     public static double deltaR;
 
+    public static String path;
+
     public static void readConfigValues() {
         Config config;
 
@@ -27,11 +29,12 @@ public class BubbleData {
         numPossibleAnswers = config.get("numPossibleAnswers").as(int.class);
         deltaC = config.get("deltaC").as(double.class);
         deltaR = config.get("deltaR").as(double.class);
+        path = config.get("path").as(String.class);
     }
 
     public static String getString() {
         return "Bubble size: " + bubbleSize + ", Start C: " + startC + ", Start R: " + startR + ", Delta C: " + deltaC
                 + ", Delta R: " + deltaR + ", Num questions: " + numQuestions + ", Num possible answers: "
-                + numPossibleAnswers;
+                + numPossibleAnswers + ", Path: " + path;
     }
 }

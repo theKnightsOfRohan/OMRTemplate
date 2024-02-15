@@ -13,14 +13,14 @@ public class OpticalMarkReaderMain {
     private static String currentFolder = System.getProperty("user.dir") + "/";
 
     public static void main(String[] args) {
-        String pathToPdf = currentFolder + "assets/OfficialOMRSampleDoc.pdf";
+        BubbleData.readConfigValues();
+        System.out.println(BubbleData.getString());
+
+        String pathToPdf = currentFolder + BubbleData.path;
 
         System.out.println("Loading pdf at " + pathToPdf);
 
-        BubbleData.readConfigValues();
-
         ArrayList<DImage> pages = getPagesFromPDF(pathToPdf);
-        System.out.println(BubbleData.getString());
 
         applyFilter(pages, pathToPdf, new BWFilter());
 

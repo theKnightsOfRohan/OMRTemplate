@@ -1,8 +1,10 @@
-bubbleSize = 20
-startC = 105
-startR = 108
-numQuestions = 12
-numPossibleAnswers = 5
+module BubbleData
 
-deltaC = 24.5
-deltaR = 48.36
+bubbleSize: Int = 20
+startC: Int = 105
+startR: Int = 108
+numQuestions: Int = 12
+numPossibleAnswers: Int = 5
+deltaC: Float = 24.5
+deltaR: Float = 48.36
+path: String = "assets/OfficialOMRSampleDoc.pdf"
