@@ -115,15 +115,6 @@ public class OpticalMarkReaderMain {
 
         return darkestBubble;
     }
-
-    private static String fileChooser() {
-        String userDirLocation = System.getProperty("user.dir");
-        File userDir = new File(userDirLocation);
-        JFileChooser fc = new JFileChooser(userDir);
-        int returnVal = fc.showOpenDialog(null);
-        File file = fc.getSelectedFile();
-        return file.getAbsolutePath();
-    }
 }
 
 interface NamedPixelFilter extends PixelFilter {

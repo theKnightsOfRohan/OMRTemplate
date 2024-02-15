@@ -1,5 +1,7 @@
 module BubbleData
 
+// All dimension requirements are listed here, in pixels
+
 bubbleSize = 20
 startC = 105
 startR = 108

@@ -15,6 +15,7 @@ public class BubbleData {
 
     public static String path;
 
+    // Read the config values from the .pkl file
     public static void readConfigValues() {
         Config config;
 
