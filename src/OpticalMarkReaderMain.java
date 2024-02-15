@@ -76,8 +76,8 @@ public class OpticalMarkReaderMain {
         short[][] pixels = image.getBWPixelGrid();
 
         for (int i = 0; i < BubbleData.numQuestions; i++) {
-            int questionNum = getDarkestMarkedBubble(pixels, i);
-            markedAnswers.add(questionNum);
+            int markedAnswer = getDarkestMarkedBubble(pixels, i);
+            markedAnswers.add(markedAnswer);
         }
 
         return markedAnswers;
